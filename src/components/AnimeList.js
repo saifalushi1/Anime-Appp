@@ -21,8 +21,8 @@ const AnimeList = ({ nestedData  }) => {
                         </div>
 
                         <div className="anime-details">
-                        <Link to={ `/trending-anime/${item.mal_id}` }>
-                            <h3 className="anime-name">{ item.title }</h3>
+                        <Link to={ `/top-anime/${item.mal_id}` }>
+                            <h3 className="anime-name">{ item.title_english ? item.title_english : item.title }</h3>
                         </Link>
                             <span className="episode-count">Episode Count: { item.episodes }</span>
                         </div>    
