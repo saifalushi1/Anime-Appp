@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
-import NestedComponent from './components/NestedComponent'
+import AnimeList from './components/AnimeList'
+import Anime from './components/Anime';
 import './App.css';
 
 const App = () => {
   const [apiData, setApiData] = useState([])
-  const url = 'https://kitsu.io/api/edge/trending/anime'
-
+  // const url = 'https://kitsu.io/api/edge/trending/anime'
+  const url = 'https://api.jikan.moe/v4/top/anime'
+  
   useEffect(() => {
     fetch(url)
       .then((res) => res.json()) 
@@ -22,9 +24,13 @@ const App = () => {
   }
 
   return (
-    <div><nav><Link to='/'>Home</Link></nav>
+    <div>
+      <nav>
+        <Link to='/'>Home</Link>
+      </nav>
       <Routes>
-        <Route path='/' element={ <NestedComponent nestedData={ apiData } />} />
+        <Route path='/' element={ <AnimeList nestedData={ apiData } />} />
+        <Route path='/trending-anime/:id' element={ <Anime /> } />
       </Routes>
     </div>
   )
