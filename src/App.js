@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AnimeList from './components/AnimeList'
 import MangaList from './components/MangaList';
 import Anime from './components/Anime';
