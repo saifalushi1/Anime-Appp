@@ -45,7 +45,7 @@ const App = () => {
     <div>
       <nav>
         <Link to='/'>Home</Link>
-        <Link to='/manga'>Manga</Link>
+        <Link to='/manga'><p> Manga</p>Manga</Link>
       </nav>
       <Routes>
         <Route path='/' element={ <AnimeList nestedData={ apiData } />} />
