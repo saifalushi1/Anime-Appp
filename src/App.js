@@ -6,6 +6,7 @@ import MangaList from './components/MangaList';
 import Anime from './components/Anime';
 import './App.css';
 import Manga from './components/Manga';
+import { Navbar, NavItem, Nav } from 'reactstrap';
 
 const App = () => {
   const [apiData, setApiData] = useState([])
@@ -43,10 +44,16 @@ const App = () => {
 
   return (
     <div>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/manga'><p> Manga</p>Manga</Link>
-      </nav>
+      <div>
+  <Nav pills>
+    <NavItem>
+      <Link to='/'>Home</Link>
+    </NavItem>
+    <NavItem>
+      <Link to='/manga'>Manga</Link>
+    </NavItem>
+  </Nav>
+</div>
       <Routes>
         <Route path='/' element={ <AnimeList nestedData={ apiData } />} />
         <Route path='/manga' element={ <MangaList nestedMangaData={ mangaData } /> } />

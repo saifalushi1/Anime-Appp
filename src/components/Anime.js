@@ -1,3 +1,5 @@
+/*eslint-disable react-hooks/exhaustive-deps */
+/*eslint-disable jsx-a11y/img-redundant-alt */
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
@@ -32,7 +34,7 @@ const Anime = () => {
         {
             animeData.map((item)=> (
                 <div>
-            <img className="anime-img" alt={"img"} src={ item.images.jpg.small_image_url } />
+            <img className="anime-img" alt={item.title} src={ item.images.jpg.small_image_url } />
              <h2>{ item.title_english ? item.title_english : item.title}</h2>
                 <h4>{ item.title_japanese}</h4>
                     </div>
