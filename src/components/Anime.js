@@ -23,9 +23,6 @@ const Anime = () => {
     
     console.log(animeData)
     
-
-    
-
     if(!animeData){
         console.log(animeData)
         return(

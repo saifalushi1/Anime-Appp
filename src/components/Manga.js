@@ -35,6 +35,13 @@ const Manga = () => {
         }
         return item.volumes
       }
+
+      if(!selectedMangaData){
+        console.log(selectedMangaData)
+        return(
+            <p>Page Loading</p>
+            )
+    }
     return(
         <>
             <Container>
