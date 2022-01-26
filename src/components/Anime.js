@@ -22,6 +22,9 @@ const Anime = () => {
     
     console.log(animeData)
     
+
+    
+
     if(!animeData){
         console.log(animeData)
         return(
@@ -33,7 +36,7 @@ const Anime = () => {
         <>
         {
             animeData.map((item)=> (
-                <div>
+                <div key={item.mal_id}>
             <img className="anime-img" alt={item.title} src={ item.images.jpg.image_url } />
              <h2>{ item.title_english ? item.title_english : item.title}</h2>
                 <h4>{ item.title_japanese}</h4>

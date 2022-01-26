@@ -10,6 +10,25 @@ body{
   justify-content: space-around;
 }
 
+.card{
+  max-width: 300px;
+  max-height: 420px;
+  min-height: 420px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  /* padding: 40px; */
+}
+
+.card-body{
+  background-color: #202125;
+}
+
+.text-muted{
+  position: relative;
+
+}
+
 h1, h2, h4{
   color: #fff;
 }
@@ -39,4 +58,9 @@ a:hover{
 .ulist, ulist li {
   text-decoration: none;
   list-style-type: none;
+}
+
+.anime-poster-img{
+  width: 300px;
+  height: 300px;
 }

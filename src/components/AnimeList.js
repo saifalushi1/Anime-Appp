@@ -34,13 +34,12 @@ const AnimeList = ({ nestedData  }) => {
       <CardGroup>
       {
         nestedData.map((item, index) => (
-          (index < 10 ? 
             <div key={item.mal_id}>
               <Card inverse>
                 <CardImg 
                   className="anime-poster-img"
                   alt={`${item.title} poster`}
-                  src={ item.images.jpg.image_url }
+                  src={ item.images.jpg.large_image_url }
                   width="100%"
                 />
                 <CardBody>
@@ -50,9 +49,6 @@ const AnimeList = ({ nestedData  }) => {
                     </Link>
                   </CardTitle>
                   <CardText>
-                    empty for now
-                  </CardText>
-                  <CardText>
                     <small className="text-muted">
                     Ep: { item.episodes }
                     </small>
@@ -60,7 +56,6 @@ const AnimeList = ({ nestedData  }) => {
                 </CardBody>
               </Card>
             </div>
-          : null)
         ))
       }
       </CardGroup>

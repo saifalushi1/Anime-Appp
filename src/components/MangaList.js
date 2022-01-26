@@ -2,17 +2,12 @@
 /*eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react"
 import { Link } from "react-router-dom"
+import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup} from 'reactstrap'
 
 const MangaList = ( {nestedMangaData} ) => {
 console.log(nestedMangaData)
-    return(
-
-        <div>
-             <h1>Top Manga</h1>
-      {
-        nestedMangaData.map((item, index) => (
-          (index < 10 ? 
-            <div key={item.mal_id}>
+/*
+<div key={item.mal_id}>
                 <ul className="ulist">
                     <li className="item-top">
                         <div className="ranking">
@@ -34,10 +29,43 @@ console.log(nestedMangaData)
                         </div>    
                     </li>
                 </ul>
+            </div>  
+*/
+    return(
+
+        <div>
+             <h1>Top Manga</h1>
+             <CardGroup>
+        {
+        nestedMangaData.map((item, index) => (
+            <div key={item.mal_id}>
+              <Card inverse>
+                <CardImg 
+                  className="anime-poster-img"
+                  alt={`${item.title} poster`}
+                  src={ item.images.jpg.large_image_url }
+                  width="100%"
+                />
+                <CardBody>
+                  <CardTitle tag="h5" className="anime-name">
+                    <Link to={ `/top-anime/${item.mal_id}` }>
+                      { item.title_english ? item.title_english : item.title }
+                    </Link>
+                  </CardTitle>
+                  <CardText>
+                    <small className="text-muted">
+                    Volumes: { item.title === "One Piece" ? "101" : item.volumes ||
+                      item.title_english === "Grand Blue Dreaming" ? "17" : item.volumes ||
+                      item.title === "Kingdom" ? "63" : item.volumes
+                      }
+                    </small>
+                  </CardText>
+                </CardBody>
+              </Card>
             </div>
-          : null)
         ))
-      }
+        }
+            </CardGroup>
     </div>
     )
 }
