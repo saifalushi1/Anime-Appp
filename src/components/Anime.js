@@ -31,7 +31,7 @@ const Anime = () => {
             animeData.map((item)=> (
                 <div key={item.mal_id} className="anime-page-div">
             <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
-                <h3><a href={item.trailer.embed_url} target="_blank">{item.title}</a></h3>
+                <h3><a href={item.trailer.embed_url} target="_blank" rel="noreferrer">{item.title}</a></h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
                     {item.genres.map((genre, index)=> (
