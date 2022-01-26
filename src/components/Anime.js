@@ -34,7 +34,7 @@ const Anime = () => {
         {
             animeData.map((item)=> (
                 <div>
-            <img className="anime-img" alt={item.title} src={ item.images.jpg.small_image_url } />
+            <img className="anime-img" alt={item.title} src={ item.images.jpg.image_url } />
              <h2>{ item.title_english ? item.title_english : item.title}</h2>
                 <h4>{ item.title_japanese}</h4>
                     </div>

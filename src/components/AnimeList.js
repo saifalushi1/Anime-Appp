@@ -2,16 +2,12 @@
 /*eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup} from 'reactstrap'
 
 const AnimeList = ({ nestedData  }) => {
   console.log(nestedData)
-  return (
-    <div>
-      <h1>Top Anime</h1>
-      {
-        nestedData.map((item, index) => (
-          (index < 10 ? 
-            <div key={item.mal_id}>
+  /* 
+   <div key={item.mal_id}>
                 <ul className="ulist">
                     <li className="item-top">
                         <div className="ranking">
@@ -31,9 +27,43 @@ const AnimeList = ({ nestedData  }) => {
                     </li>
                 </ul>
             </div>
+  */
+  return (
+    <div>
+      <h1>Top Anime</h1>
+      <CardGroup>
+      {
+        nestedData.map((item, index) => (
+          (index < 10 ? 
+            <div key={item.mal_id}>
+              <Card inverse>
+                <CardImg 
+                  className="anime-poster-img"
+                  alt={`${item.title} poster`}
+                  src={ item.images.jpg.image_url }
+                  width="100%"
+                />
+                <CardBody>
+                  <CardTitle tag="h5" className="anime-name">
+                    <Link to={ `/top-anime/${item.mal_id}` }>
+                      { item.title_english ? item.title_english : item.title }
+                    </Link>
+                  </CardTitle>
+                  <CardText>
+                    empty for now
+                  </CardText>
+                  <CardText>
+                    <small className="text-muted">
+                    Ep: { item.episodes }
+                    </small>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </div>
           : null)
         ))
       }
+      </CardGroup>
     </div>
   )
 }

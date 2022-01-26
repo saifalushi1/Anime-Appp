@@ -43,23 +43,25 @@ const App = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="anime-app">
+      <div className="navigation">
   <Nav pills>
-    <NavItem>
+    <NavItem className="home-nav">
       <Link to='/'>Home</Link>
     </NavItem>
-    <NavItem>
+    <NavItem className="manga-nav">
       <Link to='/manga'>Manga</Link>
     </NavItem>
   </Nav>
 </div>
+  <div className="content-wrapper">
       <Routes>
         <Route path='/' element={ <AnimeList nestedData={ apiData } />} />
         <Route path='/manga' element={ <MangaList nestedMangaData={ mangaData } /> } />
         <Route path="/manga/:id" element= {<Manga /> } />
         <Route path='/top-anime/:id' element={ <Anime /> } />
       </Routes>
+  </div>
     </div>
   )
 }
