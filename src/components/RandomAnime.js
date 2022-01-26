@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Container, Spinner } from "reactstrap"
+import { Container } from "reactstrap"
 
 const RandomAnime = () => {
     const [randomAnimeData, setRandomAnimeData] = useState([])
