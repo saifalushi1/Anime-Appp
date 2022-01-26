@@ -6,7 +6,7 @@ import MangaList from './components/MangaList';
 import Anime from './components/Anime';
 import './App.css';
 import Manga from './components/Manga';
-import { Navbar, NavItem, Nav } from 'reactstrap';
+import { NavItem, Nav } from 'reactstrap';
 
 const App = () => {
   const [apiData, setApiData] = useState([])
