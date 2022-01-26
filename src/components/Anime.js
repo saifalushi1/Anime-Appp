@@ -2,7 +2,7 @@
 /*eslint-disable jsx-a11y/img-redundant-alt */
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { CardColumns, Card, CardBody, CardTitle, CardSubtitle, CardText, Col, Container } from "reactstrap"
+import { Container } from "reactstrap"
 
 const Anime = () => {
     const { id } = useParams()
