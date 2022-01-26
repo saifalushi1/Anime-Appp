@@ -37,11 +37,11 @@ const Manga = () => {
       }
     return(
         <>
+            <Container>
         {
             selectedMangaData.map((item)=> (
                 <div key={item.mal_id} className="anime-page-div">
             <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
-            <Container>
                 <h3>{item.title}</h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
@@ -53,12 +53,10 @@ const Manga = () => {
                     <li><p>Vol {checkManga(item)} / {checkManga(item)}</p> </li>
                 </div>
                 <h6>{item.synopsis}</h6>
-             </Container>
                     </div>
         ))
-        }
-        <div>
-        </div>
+    }
+    </Container>
         </>
     )
 }

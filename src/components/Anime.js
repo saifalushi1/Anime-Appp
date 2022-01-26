@@ -35,11 +35,11 @@ const Anime = () => {
     console.log(animeData)
     return(
         <>
+            <Container>
         {
             animeData.map((item)=> (
                 <div key={item.mal_id} className="anime-page-div">
             <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
-            <Container>
                 <h3>{item.title}</h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
@@ -50,10 +50,10 @@ const Anime = () => {
                     <li><p>Ep {item.episodes} / {item.episodes} : {item.duration}</p> </li>
                 </div>
                 <h6>{item.synopsis}</h6>
-             </Container>
                 </div>
         ))
-        }
+    }
+    </Container>
         </>
     )
 }
