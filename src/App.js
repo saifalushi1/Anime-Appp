@@ -29,14 +29,14 @@ const App = () => {
     fetch(mangaUrl)
       .then((res) => res.json()) 
       .then((json) => {
-        console.log(json)
+        // console.log(json)
         setMangaData(json.data)
       })
       .catch(console.error)
   }, [])
   
-  console.log(apiData)
-  console.log(mangaData)
+  // console.log(apiData)
+  // console.log(mangaData)
 
   if (!apiData) {
     <p>Site Loading</p>
