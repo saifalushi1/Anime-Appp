@@ -2,7 +2,7 @@
 /*eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react"
 import { Link } from "react-router-dom"
-import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup} from 'reactstrap'
+import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup, Container} from 'reactstrap'
 
 const MangaList = ( {nestedMangaData} ) => {
 console.log(nestedMangaData)
@@ -34,7 +34,8 @@ console.log(nestedMangaData)
     return(
 
         <div>
-             <h1>Top Manga</h1>
+             <h1 className="page-title">Top Manga</h1>
+             <Container>
              <CardGroup>
         {
         nestedMangaData.map((item, index) => (
@@ -66,6 +67,7 @@ console.log(nestedMangaData)
         ))
         }
             </CardGroup>
+            </Container>
     </div>
     )
 }

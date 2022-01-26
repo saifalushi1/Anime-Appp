@@ -2,6 +2,7 @@
 /*eslint-disable jsx-a11y/img-redundant-alt */
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { CardColumns, Card, CardBody, CardTitle, CardSubtitle, CardText, Col, Container } from "reactstrap"
 
 const Anime = () => {
     const { id } = useParams()
@@ -36,14 +37,26 @@ const Anime = () => {
         <>
         {
             animeData.map((item)=> (
-                <div key={item.mal_id}>
-            <img className="anime-img" alt={item.title} src={ item.images.jpg.image_url } />
-             <h2>{ item.title_english ? item.title_english : item.title}</h2>
-                <h4>{ item.title_japanese}</h4>
+                <div key={item.mal_id} className="anime-page-div">
+            <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
+            <Container>
+                <h3>{item.title}</h3>
+                <div className="anime-info">
+                    <ul className="anime-info-list">
+
+                    {item.genres.map((genre, index)=> (
+                        <li key={index}><p className="genre">{genre.name}</p></li>
+                        ))}    
+                    </ul>
+                    <li><p>Ep {item.episodes} / {item.episodes} : {item.duration}</p> </li>
+                </div>
+                <h6>{item.synopsis}</h6>
+             </Container>
                     </div>
-        
-    ))
+        ))
         }
+        <div>
+        </div>
         </>
     )
 }

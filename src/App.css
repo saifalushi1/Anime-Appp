@@ -55,6 +55,10 @@ a:hover{
   color: #cae962;
 }
 
+ul{
+  list-style-type: none;
+}
+
 .ulist, ulist li {
   text-decoration: none;
   list-style-type: none;
@@ -63,4 +67,45 @@ a:hover{
 .anime-poster-img{
   width: 300px;
   height: 300px;
+}
+
+.mb-2{
+  margin-top: 20px;
+}
+
+.card-text:last-child{
+  color: white;
+}
+/* .anime-main-content{
+  position:absolute;
+  right: 60%;
+  top: 32px;
+} */
+
+.anime-img{
+  width: 230px;
+  height: 350px;
+}
+
+.page-title{
+  text-align: center;
+  text-shadow: 2.5px 2.5px #cae962;
+  margin-bottom: 10px;
+}
+
+.anime-page-div{
+  color: white
+}
+
+.anime-page-div li{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.anime-duration{
+  list-style-type:circle;
+}
+
+.genre{
+  display: inline;
 }
