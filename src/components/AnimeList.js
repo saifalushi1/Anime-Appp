@@ -23,19 +23,6 @@ const AnimeList = ({ nestedData  }) => {
                   width="100%"
                 />
                 </Link>
-                <div className='hover-function'>
-                {/* <UncontrolledPopover
-                 placement="bottom"
-                 target="PopoverHover"
-                 trigger="hover"
-                 >
-                   <PopoverHeader>
-                     info about anime
-                   </PopoverHeader>
-                   <PopoverBody>
-                   </PopoverBody>
-                 </UncontrolledPopover> */}
-                 </div>
                 <CardBody>
                   <CardTitle tag="h5" className="anime-name" id='PopoverHover'>
                     <Link to={ `/top-anime/${item.mal_id}` }>

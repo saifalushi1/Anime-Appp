@@ -43,7 +43,6 @@ const Anime = () => {
                 <h3>{item.title}</h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
-
                     {item.genres.map((genre, index)=> (
                         <li key={index}><p className="genre">{genre.name}</p></li>
                         ))}    
@@ -52,11 +51,9 @@ const Anime = () => {
                 </div>
                 <h6>{item.synopsis}</h6>
              </Container>
-                    </div>
+                </div>
         ))
         }
-        <div>
-        </div>
         </>
     )
 }
