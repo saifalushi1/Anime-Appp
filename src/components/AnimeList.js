@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup, Container} from 'reactstrap'
 
 const AnimeList = ({ nestedData  }) => {
-  console.log(nestedData)
   return (
     <div>
       <h1 className="page-title">Top Anime</h1>

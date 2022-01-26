@@ -15,13 +15,10 @@ const Manga = () => {
         fetch(mangaIdUrl)
         .then((res)=> res.json())
         .then((json) => {
-            console.log(json.data)
             setSelectedMangaData([json.data])
         })
-
+        .catch(console.error)
     }, [])
-
-    console.log(selectedMangaData)
 
     function checkManga(item){
         if(item.title === "One Piece"){
@@ -37,7 +34,6 @@ const Manga = () => {
       }
 
       if(!selectedMangaData){
-        console.log(selectedMangaData)
         return(
             <p>Page Loading</p>
             )

@@ -10,14 +10,12 @@ const RandomAnime = () => {
         .then((res)=> res.json())
         .then((json)=> {
             setRandomAnimeData([json.data])
-            console.log(json)
-        })
 
+        })
+        .catch(console.error)
     }, [])
-    console.log(randomAnimeData)
 
     if(!randomAnimeData){
-        console.log(randomAnimeData)
         return(
             <p>Page Loading</p>
             )
@@ -29,7 +27,7 @@ const RandomAnime = () => {
             randomAnimeData.map((item)=> (
                 <div key={item.mal_id} className="anime-page-div">
             <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
-                <h3>{item.title}</h3>
+                <h3><a href={item.trailer.embed_url} target="_blank">{item.title}</a></h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
                     {item.genres.map((genre, index)=> (

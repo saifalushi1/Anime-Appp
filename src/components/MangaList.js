@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 import { Card, CardImg, CardTitle, CardBody, CardText, CardGroup, Container} from 'reactstrap'
 
 const MangaList = ( {nestedMangaData} ) => {
-console.log(nestedMangaData)
 function checkManga(item){
   if(item.title === "One Piece"){
     return "101"

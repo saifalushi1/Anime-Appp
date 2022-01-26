@@ -10,26 +10,20 @@ const Anime = () => {
     const [animeData, setAnimeData] = useState([])
     
     const animeUrl = `https://api.jikan.moe/v4/anime/${id}`
-    console.log(animeUrl)
     useEffect(() => {
         fetch(animeUrl)
         .then((res) => res.json())
         .then((json) => {
-            console.log(json.data)
             setAnimeData([json.data])
-            console.log(animeData)
         })
+        .catch(console.error)
     }, [])
-    
-    console.log(animeData)
-    
+
     if(!animeData){
-        console.log(animeData)
         return(
             <p>Page Loading</p>
             )
     }
-    console.log(animeData)
     return(
         <>
             <Container>
@@ -37,7 +31,7 @@ const Anime = () => {
             animeData.map((item)=> (
                 <div key={item.mal_id} className="anime-page-div">
             <img className="anime-img" alt={item.title} src={ item.images.jpg.large_image_url } />
-                <h3>{item.title}</h3>
+                <h3><a href={item.trailer.embed_url} target="_blank">{item.title}</a></h3>
                 <div className="anime-info">
                     <ul className="anime-info-list">
                     {item.genres.map((genre, index)=> (
