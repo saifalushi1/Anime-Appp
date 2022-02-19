@@ -18,7 +18,7 @@ const Anime = () => {
             setAnimeData([json.data])
         })
         .catch(console.error)
-        axios.get(animeUrl)
+        axios.get(animeUrl, {headers: {"Content-Type": "application/json"}})
         .then((data) => console.log(`Axios request: ${data}`))
     }, [])
 
