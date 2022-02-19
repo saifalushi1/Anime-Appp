@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Container } from "reactstrap"
+import axios from "axios"
 
 const Anime = () => {
     const { id } = useParams()
@@ -17,6 +18,8 @@ const Anime = () => {
             setAnimeData([json.data])
         })
         .catch(console.error)
+        axios.get(animeUrl)
+        .then((data) => console.log(`Axios request: ${data}`))
     }, [])
 
     if(!animeData){

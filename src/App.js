@@ -61,6 +61,7 @@ const App = () => {
         <Route path="/manga/:id" element= {<Manga /> } />
         <Route path="/top-anime/:id" element={ <Anime /> } />
         <Route path="/random-anime" element={ <RandomAnime /> } />
+        {/* <Route path="/search-anime/:name" element */}
       </Routes>
   </div>
     </div>
