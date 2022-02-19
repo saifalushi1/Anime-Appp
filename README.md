@@ -2,6 +2,8 @@
 
 This react project is going to be a one-stop shop for all anime news! You will be able to see the top trending anime's, New anime news, and more!
 
+<a href="https://react-anime-app.netlify.app/" target="_blank">Try it out yourself!</a>
+
 <img width="1381" alt="WireFram" src="https://user-images.githubusercontent.com/78934157/150219604-cb4637ee-0066-4ef1-89ef-35de8408de13.png">
 
 -The home page is going to hold the main components that display's a ranking list of animes and small section of the new's tab and all of the websites info.
@@ -15,7 +17,7 @@ This react project is going to be a one-stop shop for all anime news! You will b
  As a user when I view the anime news It should be structured so the title and date a present so i can decide If I want to read it.
  As a user the overall theme should stay consistent
 
-Link for the API: https://kitsu.docs.apiary.io/#reference/anime
+Link for the API: https://docs.api.jikan.moe/
 
 <img width="550" alt="Api data example" src="https://user-images.githubusercontent.com/78934157/150220546-cc9d3ed5-12ba-4720-862c-20a36d85f573.png">
 
