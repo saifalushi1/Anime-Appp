@@ -2,7 +2,7 @@
 
 This react project is going to be a one-stop shop for all anime news! You will be able to see the top trending anime's, New anime news, and more!
 
-<a href="https://react-anime-app.netlify.app/" target="_blank">Try it out yourself!</a>
+<a href="https://otaku-emporium.netlify.app" target="_blank">Try it out yourself!</a>
 
 <img width="1381" alt="WireFram" src="https://user-images.githubusercontent.com/78934157/150219604-cb4637ee-0066-4ef1-89ef-35de8408de13.png">
 
